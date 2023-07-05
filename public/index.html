@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Chunked horray</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Chunked response demo</h1>
+      <label for="howmany">Lines: </label>
+      <input id="howmany" type="number" />
+      <button id="fetchme">Fetch me</button
+      ><button id="chunkme">Chunk me</button>
+      <div>Duration: <span id="duration"></span> sec</div>
+      <table id="tchunked">
+        <caption>
+          Sample Chunk
+        </caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Payload</th>
+          </tr>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="index.js" type="application/javascript"></script>
+</html>

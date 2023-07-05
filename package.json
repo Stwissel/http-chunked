@@ -1,0 +1,26 @@
+{
+  "name": "http-chunked",
+  "version": "1.0.0",
+  "description": "Samples for http chunked processing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Stwissel/http-chunked.git"
+  },
+  "keywords": [
+    "http"
+  ],
+  "author": "stw@linux.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Stwissel/http-chunked/issues"
+  },
+  "homepage": "https://github.com/Stwissel/http-chunked#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}

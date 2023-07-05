@@ -1,0 +1,27 @@
+#container {
+  margin: 30px;
+  background-color: white;
+}
+
+body {
+  background-color: #ffcccc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+  width: 600px;
+  padding: 30px;
+}
+
+th {
+  border-bottom: 1px solid gray;
+  text-align: left;
+}
+tr:nth-child(odd) {
+  background-color: lavenderblush;
+}
+
+tr {
+  padding: 3px;
+  font-size: larger;
+}
