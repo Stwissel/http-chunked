@@ -1,16 +1,32 @@
 #container {
   margin: 30px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 5px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+span.info {
+  font-weight: 900;
 }
 
 body {
-  background-color: #ffcccc;
+  background-color: #9dd697;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 table {
-  width: 600px;
-  padding: 30px;
+  width: 100%;
 }
 
 th {
@@ -18,7 +34,11 @@ th {
   text-align: left;
 }
 tr:nth-child(odd) {
-  background-color: lavenderblush;
+  background-color: rgb(227, 249, 233);
+}
+
+td {
+  padding: 2px;
 }
 
 tr {

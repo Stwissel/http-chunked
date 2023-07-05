@@ -8,16 +8,22 @@
   </head>
   <body>
     <div id="container">
-      <h1>Chunked response demo</h1>
-      <label for="howmany">Lines: </label>
-      <input id="howmany" type="number" />
-      <button id="fetchme">Fetch me</button
-      ><button id="chunkme">Chunk me</button>
-      <div>Duration: <span id="duration"></span> sec</div>
+      <h1>Chunked vs Fetch Demo</h1>
+      <p>
+        Use you browser's development tools to throttle the connection to see
+        the effect
+      </p>
+      <div>
+        <label for="howmany">Lines: </label>
+        <input id="howmany" type="number" />
+        <button id="fetchme">Fetch me</button
+        ><button id="chunkme">Chunk me</button>
+        <div class="info">
+          Duration: <span class="info" id="duration">??</span> sec, first paint:
+          <span class="info" id="firstpaint">??</span> sec
+        </div>
+      </div>
       <table id="tchunked">
-        <caption>
-          Sample Chunk
-        </caption>
         <thead>
           <tr>
             <th>#</th>

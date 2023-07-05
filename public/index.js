@@ -30,10 +30,18 @@ const parseJSON = () => {
   });
 };
 
-const jsonToTableRow = (insertPoint) => {
+const jsonToTableRow = (insertPoint, startTime) => {
+  let firstPaint = true;
   return new WritableStream({
     write(json) {
       addRow(json, insertPoint);
+      if (firstPaint) {
+        const firstTime = new Date();
+        console.log(`First chunk - ${firstTime}`);
+        document.getElementById('firstpaint').innerText =
+          (firstTime - startTime) / 1000;
+        firstPaint = false;
+      }
     },
     abort(err) {
       console.error(err);
@@ -57,6 +65,8 @@ const fetchAllData = (many) => {
       const endTime = new Date();
       console.log(`End Fetch ${many} - ${endTime}`);
       document.getElementById('duration').innerText =
+        (endTime - startTime) / 1000;
+      document.getElementById('firstpaint').innerText =
         (endTime - startTime) / 1000;
     })
     .catch((e) => console.error(e));
@@ -84,7 +94,7 @@ const chunkAllData = async (many) => {
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(splitStream())
     .pipeThrough(parseJSON())
-    .pipeTo(jsonToTableRow(insertPoint));
+    .pipeTo(jsonToTableRow(insertPoint, startTime));
 
   const endTime = new Date();
   console.log(`End Chunk- ${endTime}`);
