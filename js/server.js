@@ -21,7 +21,7 @@ app.get('/data/:howmany', (req, res) => {
     res.write(front + JSON.stringify(result));
   }
 
-  res.end(']');
+  res.end('\n]');
 });
 
 app.listen(3000, () => console.log('Server running on 3000'));

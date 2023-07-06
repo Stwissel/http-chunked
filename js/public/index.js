@@ -24,7 +24,7 @@ const parseJSON = () => {
       if (chunk.endsWith(',')) {
         controller.enqueue(JSON.parse(chunk.slice(0, -1)));
       } else if (chunk.endsWith('}')) {
-        controller.enqueue(JSON.parse(part));
+        controller.enqueue(JSON.parse(chunk));
       }
     }
   });
